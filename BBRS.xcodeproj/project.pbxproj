@@ -12,6 +12,8 @@
 		3E6DBCBB2011477E00BA2C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6DBCB92011477E00BA2C88 /* Main.storyboard */; };
 		3E6DBCBD2011477E00BA2C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E6DBCBC2011477E00BA2C88 /* Assets.xcassets */; };
 		3E6DBCC02011477E00BA2C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6DBCBE2011477E00BA2C88 /* LaunchScreen.storyboard */; };
+		3E6DBCC920114BBD00BA2C88 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6DBCC820114BBD00BA2C88 /* EstimoteSDK.framework */; };
+		3E6DBCCB20114C8E00BA2C88 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3E6DBCBC2011477E00BA2C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E6DBCBF2011477E00BA2C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E6DBCC12011477E00BA2C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E6DBCC820114BBD00BA2C88 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = "../../Downloads/iOS-SDK-master/EstimoteSDK/EstimoteSDK.framework"; sourceTree = "<group>"; };
+		3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6DBCC920114BBD00BA2C88 /* EstimoteSDK.framework in Frameworks */,
+				3E6DBCCB20114C8E00BA2C88 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				3E6DBCB42011477E00BA2C88 /* BBRS */,
 				3E6DBCB32011477E00BA2C88 /* Products */,
+				3E6DBCC720114BBD00BA2C88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +69,15 @@
 				3E6DBCC12011477E00BA2C88 /* Info.plist */,
 			);
 			path = BBRS;
+			sourceTree = "<group>";
+		};
+		3E6DBCC720114BBD00BA2C88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */,
+				3E6DBCC820114BBD00BA2C88 /* EstimoteSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +292,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDZFEQK62W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BBRS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitchemery.BBRS;
@@ -291,6 +311,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YDZFEQK62W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BBRS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitchemery.BBRS;
