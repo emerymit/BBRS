@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
 
     var window: UIWindow?
     let beaconManager = ESTBeaconManager()
+    let center = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         //set the delegate of the beacon manager to the app delegate
         self.beaconManager.delegate = self
+        
+        self.beaconManager.requestAlwaysAuthorization()
+        
+        //set up the notifications
+        //the permissions were requesting
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        //request the permissions to the user
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                //handle the issue
+            }
+        }
         
         return true
     }
@@ -44,7 +59,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget"
+        content.body = "Buy some milk"
+        content.sound = UNNotificationSound.default()
 
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300,
+                                                        repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "Beacons", content: content, trigger: trigger)
+        
+    }
 
 }
-
