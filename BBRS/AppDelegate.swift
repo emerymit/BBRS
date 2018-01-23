@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     let beaconManager = ESTBeaconManager()
@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
                 //handle the issue
             }
         }
+        
+        UNUserNotificationCenter.current().delegate = self
         
         return true
     }
@@ -67,11 +69,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
         content.body = "Buy some milk"
         content.sound = UNNotificationSound.default()
 
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 300,
-                                                        repeats: false)
-        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "Beacons", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
         
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(.alert)
     }
 
 }

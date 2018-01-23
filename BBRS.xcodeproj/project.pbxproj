@@ -14,6 +14,10 @@
 		3E6DBCC02011477E00BA2C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6DBCBE2011477E00BA2C88 /* LaunchScreen.storyboard */; };
 		3E6DBCC920114BBD00BA2C88 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6DBCC820114BBD00BA2C88 /* EstimoteSDK.framework */; };
 		3E6DBCCB20114C8E00BA2C88 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */; };
+		3EB699B92016C9A100234C0F /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699B82016C9A100234C0F /* ReminderCell.swift */; };
+		3EB699BB2016CA4200234C0F /* BeaconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699BA2016CA4200234C0F /* BeaconCell.swift */; };
+		3EB699BD2016CFE800234C0F /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699BC2016CFE800234C0F /* Beacon.swift */; };
+		3EB699BF2016CFFE00234C0F /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699BE2016CFFE00234C0F /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		3E6DBCC820114BBD00BA2C88 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = "../../Downloads/iOS-SDK-master/EstimoteSDK/EstimoteSDK.framework"; sourceTree = "<group>"; };
 		3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		3E6DBCCC20114FE900BA2C88 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		3EB699B82016C9A100234C0F /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		3EB699BA2016CA4200234C0F /* BeaconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCell.swift; sourceTree = "<group>"; };
+		3EB699BC2016CFE800234C0F /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		3EB699BE2016CFFE00234C0F /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 				3E6DBCBC2011477E00BA2C88 /* Assets.xcassets */,
 				3E6DBCBE2011477E00BA2C88 /* LaunchScreen.storyboard */,
 				3E6DBCC12011477E00BA2C88 /* Info.plist */,
+				3EB699B82016C9A100234C0F /* ReminderCell.swift */,
+				3EB699BA2016CA4200234C0F /* BeaconCell.swift */,
+				3EB699BC2016CFE800234C0F /* Beacon.swift */,
+				3EB699BE2016CFFE00234C0F /* Reminder.swift */,
 			);
 			path = BBRS;
 			sourceTree = "<group>";
@@ -155,7 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6DBCB82011477E00BA2C88 /* ViewController.swift in Sources */,
+				3EB699B92016C9A100234C0F /* ReminderCell.swift in Sources */,
+				3EB699BD2016CFE800234C0F /* Beacon.swift in Sources */,
+				3EB699BF2016CFFE00234C0F /* Reminder.swift in Sources */,
 				3E6DBCB62011477E00BA2C88 /* AppDelegate.swift in Sources */,
+				3EB699BB2016CA4200234C0F /* BeaconCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
