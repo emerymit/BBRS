@@ -16,8 +16,12 @@
 		3E6DBCCB20114C8E00BA2C88 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */; };
 		3EB699B92016C9A100234C0F /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699B82016C9A100234C0F /* ReminderCell.swift */; };
 		3EB699BB2016CA4200234C0F /* BeaconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699BA2016CA4200234C0F /* BeaconCell.swift */; };
-		3EB699BD2016CFE800234C0F /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699BC2016CFE800234C0F /* Beacon.swift */; };
-		3EB699BF2016CFFE00234C0F /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699BE2016CFFE00234C0F /* Reminder.swift */; };
+		3EB699C22016D9BC00234C0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB699C12016D9BC00234C0F /* CoreData.framework */; };
+		3EB699C52016DAEE00234C0F /* BBRS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699C32016DAEE00234C0F /* BBRS.xcdatamodeld */; };
+		3EB699ED2016E3E800234C0F /* BeaconMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699E92016E3E800234C0F /* BeaconMO+CoreDataClass.swift */; };
+		3EB699EE2016E3E800234C0F /* BeaconMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699EA2016E3E800234C0F /* BeaconMO+CoreDataProperties.swift */; };
+		3EB699EF2016E3E800234C0F /* Reminder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699EB2016E3E800234C0F /* Reminder+CoreDataClass.swift */; };
+		3EB699F02016E3E800234C0F /* Reminder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB699EC2016E3E800234C0F /* Reminder+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +37,12 @@
 		3E6DBCCC20114FE900BA2C88 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		3EB699B82016C9A100234C0F /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
 		3EB699BA2016CA4200234C0F /* BeaconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconCell.swift; sourceTree = "<group>"; };
-		3EB699BC2016CFE800234C0F /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
-		3EB699BE2016CFFE00234C0F /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		3EB699C12016D9BC00234C0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3EB699C42016DAEE00234C0F /* BBRS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BBRS.xcdatamodel; sourceTree = "<group>"; };
+		3EB699E92016E3E800234C0F /* BeaconMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeaconMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3EB699EA2016E3E800234C0F /* BeaconMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeaconMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3EB699EB2016E3E800234C0F /* Reminder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3EB699EC2016E3E800234C0F /* Reminder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB699C22016D9BC00234C0F /* CoreData.framework in Frameworks */,
 				3E6DBCC920114BBD00BA2C88 /* EstimoteSDK.framework in Frameworks */,
 				3E6DBCCB20114C8E00BA2C88 /* EstimoteSDK.framework in Frameworks */,
 			);
@@ -70,6 +79,11 @@
 		3E6DBCB42011477E00BA2C88 /* BBRS */ = {
 			isa = PBXGroup;
 			children = (
+				3EB699E92016E3E800234C0F /* BeaconMO+CoreDataClass.swift */,
+				3EB699EA2016E3E800234C0F /* BeaconMO+CoreDataProperties.swift */,
+				3EB699EB2016E3E800234C0F /* Reminder+CoreDataClass.swift */,
+				3EB699EC2016E3E800234C0F /* Reminder+CoreDataProperties.swift */,
+				3EB699C32016DAEE00234C0F /* BBRS.xcdatamodeld */,
 				3E6DBCCC20114FE900BA2C88 /* ObjCBridge.h */,
 				3E6DBCB52011477E00BA2C88 /* AppDelegate.swift */,
 				3E6DBCB72011477E00BA2C88 /* ViewController.swift */,
@@ -79,8 +93,6 @@
 				3E6DBCC12011477E00BA2C88 /* Info.plist */,
 				3EB699B82016C9A100234C0F /* ReminderCell.swift */,
 				3EB699BA2016CA4200234C0F /* BeaconCell.swift */,
-				3EB699BC2016CFE800234C0F /* Beacon.swift */,
-				3EB699BE2016CFFE00234C0F /* Reminder.swift */,
 			);
 			path = BBRS;
 			sourceTree = "<group>";
@@ -88,6 +100,7 @@
 		3E6DBCC720114BBD00BA2C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EB699C12016D9BC00234C0F /* CoreData.framework */,
 				3E6DBCCA20114C8E00BA2C88 /* EstimoteSDK.framework */,
 				3E6DBCC820114BBD00BA2C88 /* EstimoteSDK.framework */,
 			);
@@ -167,11 +180,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6DBCB82011477E00BA2C88 /* ViewController.swift in Sources */,
+				3EB699EF2016E3E800234C0F /* Reminder+CoreDataClass.swift in Sources */,
+				3EB699C52016DAEE00234C0F /* BBRS.xcdatamodeld in Sources */,
 				3EB699B92016C9A100234C0F /* ReminderCell.swift in Sources */,
-				3EB699BD2016CFE800234C0F /* Beacon.swift in Sources */,
-				3EB699BF2016CFFE00234C0F /* Reminder.swift in Sources */,
+				3EB699ED2016E3E800234C0F /* BeaconMO+CoreDataClass.swift in Sources */,
+				3EB699EE2016E3E800234C0F /* BeaconMO+CoreDataProperties.swift in Sources */,
 				3E6DBCB62011477E00BA2C88 /* AppDelegate.swift in Sources */,
 				3EB699BB2016CA4200234C0F /* BeaconCell.swift in Sources */,
+				3EB699F02016E3E800234C0F /* Reminder+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +384,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3EB699C32016DAEE00234C0F /* BBRS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3EB699C42016DAEE00234C0F /* BBRS.xcdatamodel */,
+			);
+			currentVersion = 3EB699C42016DAEE00234C0F /* BBRS.xcdatamodel */;
+			path = BBRS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3E6DBCAA2011477E00BA2C88 /* Project object */;
 }

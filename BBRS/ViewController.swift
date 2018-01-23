@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let delegate = UIApplication.shared.delegate as! AppDelegate
     var reminders: [Reminder] = []
@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        reminders.append(Reminder(title: "test", body: "test", beacon: Beacon(uuid: "", maj: 1, min: 1)))
+        reminders.append(Reminder(title: "test", body: "test", beacon: BeaconMO()))
     }
 
     override func didReceiveMemoryWarning() {
