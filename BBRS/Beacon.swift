@@ -9,12 +9,14 @@
 import Foundation
 
 class Beacon{
+    var name: String?
     var uuid: String?
     var major: Int
     var minor: Int
     
-        init(uuid: String, maj: Int, min: Int){
+    init(nme: String, uuid: String, maj: Int, min: Int){
             //initialize the beacon
+            self.name = nme
             self.uuid = uuid
             self.major = maj
             self.minor = min

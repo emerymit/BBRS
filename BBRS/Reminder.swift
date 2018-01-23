@@ -12,9 +12,9 @@ import Foundation
 class Reminder {
     var reminderTitle: String
     var reminderBody: String
-    var reminderBeacon: BeaconMO
+    var reminderBeacon: Beacon
     
-    init(title: String, body: String, beacon: BeaconMO){
+    init(title: String, body: String, beacon: Beacon){
         //initialize the reminder
         self.reminderTitle = title
         self.reminderBody = body
