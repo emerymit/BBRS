@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="-289.20539730134936"/>
+            <point key="canvasLocation" x="1271" y="-49"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xIO-bC-reZ">
@@ -102,13 +102,118 @@
                     <view key="view" contentMode="scaleToFill" id="epP-oo-ePH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nkl-h4-RHG">
+                                <rect key="frame" x="0.0" y="301" width="375" height="322"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xz3-IT-x6T">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Reminders" id="aiA-1B-8gt">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="TVs-Hc-5BN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="E9h-Fc-ojo"/>
+                                    <barButtonItem title="New Reminder" id="foN-QF-lpw">
+                                        <connections>
+                                            <segue destination="rOJ-90-Q79" kind="show" id="Xte-E4-JML"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnQ-Sv-C9C">
+                                <rect key="frame" x="16" y="84" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec5-Ie-5eA">
+                                <rect key="frame" x="16" y="139" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6t-LS-T2Z">
+                                <rect key="frame" x="16" y="197" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwi-lK-OIG">
+                                <rect key="frame" x="146" y="263" width="83" height="30"/>
+                                <state key="normal" title="Add Beacon"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vY6-4C-AFM">
+                                <rect key="frame" x="82" y="79" width="268" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWu-0F-eKd">
+                                <rect key="frame" x="84" y="134" width="266" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkq-RA-QUe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Beacons" id="tuM-cB-9w7"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOe-M1-wFz">
+                                <rect key="frame" x="85" y="193" width="265" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vY6-4C-AFM" firstAttribute="leading" secondItem="hnQ-Sv-C9C" secondAttribute="trailing" constant="25" id="2d1-pl-bTW"/>
+                            <constraint firstItem="vwi-lK-OIG" firstAttribute="leading" secondItem="XRg-Fa-SI2" secondAttribute="leading" constant="146" id="2r3-AP-Ita"/>
+                            <constraint firstItem="HOe-M1-wFz" firstAttribute="top" secondItem="mWu-0F-eKd" secondAttribute="bottom" constant="29" id="3t2-4s-fp8"/>
+                            <constraint firstItem="kkq-RA-QUe" firstAttribute="trailing" secondItem="xz3-IT-x6T" secondAttribute="trailing" id="4sT-hD-tfp"/>
+                            <constraint firstItem="XRg-Fa-SI2" firstAttribute="trailing" secondItem="vwi-lK-OIG" secondAttribute="trailing" constant="146" id="6r9-en-EkK"/>
+                            <constraint firstItem="kkq-RA-QUe" firstAttribute="leading" secondItem="nkl-h4-RHG" secondAttribute="leading" id="6yL-0z-7wg"/>
+                            <constraint firstItem="XRg-Fa-SI2" firstAttribute="trailing" secondItem="vY6-4C-AFM" secondAttribute="trailing" constant="25" id="7s6-hp-yyA"/>
+                            <constraint firstItem="Ec5-Ie-5eA" firstAttribute="leading" secondItem="XRg-Fa-SI2" secondAttribute="leading" constant="16" id="9Rv-F7-zSa"/>
+                            <constraint firstItem="hnQ-Sv-C9C" firstAttribute="leading" secondItem="XRg-Fa-SI2" secondAttribute="leading" constant="16" id="9di-0u-Qvx"/>
+                            <constraint firstItem="mWu-0F-eKd" firstAttribute="leading" secondItem="Ec5-Ie-5eA" secondAttribute="trailing" constant="25" id="Beg-h8-VPm"/>
+                            <constraint firstItem="XRg-Fa-SI2" firstAttribute="trailing" secondItem="mWu-0F-eKd" secondAttribute="trailing" constant="25" id="Czf-mI-jan"/>
+                            <constraint firstItem="HOe-M1-wFz" firstAttribute="leading" secondItem="i6t-LS-T2Z" secondAttribute="trailing" constant="25" id="DHA-n1-XyZ"/>
+                            <constraint firstItem="vY6-4C-AFM" firstAttribute="top" secondItem="kkq-RA-QUe" secondAttribute="bottom" constant="15" id="HEs-FT-0is"/>
+                            <constraint firstItem="XRg-Fa-SI2" firstAttribute="trailing" secondItem="HOe-M1-wFz" secondAttribute="trailing" constant="25" id="HxJ-8s-P5J"/>
+                            <constraint firstItem="hnQ-Sv-C9C" firstAttribute="top" secondItem="kkq-RA-QUe" secondAttribute="bottom" constant="20" id="K2D-vr-zLO"/>
+                            <constraint firstItem="mWu-0F-eKd" firstAttribute="leading" secondItem="Ec5-Ie-5eA" secondAttribute="trailing" constant="25" id="Mvb-6J-q9H"/>
+                            <constraint firstItem="vwi-lK-OIG" firstAttribute="top" secondItem="kkq-RA-QUe" secondAttribute="bottom" constant="199" id="OL8-SQ-sMQ"/>
+                            <constraint firstItem="i6t-LS-T2Z" firstAttribute="top" secondItem="Ec5-Ie-5eA" secondAttribute="bottom" constant="37" id="P9F-u8-Ij1"/>
+                            <constraint firstItem="nkl-h4-RHG" firstAttribute="top" secondItem="vwi-lK-OIG" secondAttribute="bottom" constant="8" id="PeH-UF-UVl"/>
+                            <constraint firstItem="kkq-RA-QUe" firstAttribute="trailing" secondItem="nkl-h4-RHG" secondAttribute="trailing" id="RbW-gl-ttD"/>
+                            <constraint firstItem="mWu-0F-eKd" firstAttribute="centerY" secondItem="Ec5-Ie-5eA" secondAttribute="centerY" id="SHT-ex-mXP"/>
+                            <constraint firstItem="nkl-h4-RHG" firstAttribute="top" secondItem="i6t-LS-T2Z" secondAttribute="bottom" constant="83" id="Sin-XD-1ya"/>
+                            <constraint firstItem="HOe-M1-wFz" firstAttribute="leading" secondItem="i6t-LS-T2Z" secondAttribute="trailing" constant="25" id="VcQ-Pd-OM2"/>
+                            <constraint firstItem="xz3-IT-x6T" firstAttribute="top" secondItem="XRg-Fa-SI2" secondAttribute="bottom" id="c0d-n8-yst"/>
+                            <constraint firstItem="nkl-h4-RHG" firstAttribute="leading" secondItem="XRg-Fa-SI2" secondAttribute="leading" id="dzr-4E-yIB"/>
+                            <constraint firstItem="nkl-h4-RHG" firstAttribute="trailing" secondItem="XRg-Fa-SI2" secondAttribute="trailing" id="fBe-Ju-qjV"/>
+                            <constraint firstItem="Ec5-Ie-5eA" firstAttribute="top" secondItem="hnQ-Sv-C9C" secondAttribute="bottom" constant="34" id="fgJ-dE-jcn"/>
+                            <constraint firstItem="xz3-IT-x6T" firstAttribute="top" secondItem="nkl-h4-RHG" secondAttribute="bottom" id="fxY-ii-B8t"/>
+                            <constraint firstItem="kkq-RA-QUe" firstAttribute="leading" secondItem="xz3-IT-x6T" secondAttribute="leading" id="jBS-7r-6WU"/>
+                            <constraint firstItem="kkq-RA-QUe" firstAttribute="top" secondItem="XRg-Fa-SI2" secondAttribute="top" id="nJQ-S2-wMu"/>
+                            <constraint firstItem="i6t-LS-T2Z" firstAttribute="leading" secondItem="XRg-Fa-SI2" secondAttribute="leading" constant="16" id="tOI-rd-DOR"/>
+                            <constraint firstItem="vY6-4C-AFM" firstAttribute="leading" secondItem="hnQ-Sv-C9C" secondAttribute="trailing" constant="25" id="vQm-1v-YHL"/>
+                            <constraint firstItem="nkl-h4-RHG" firstAttribute="top" secondItem="vwi-lK-OIG" secondAttribute="bottom" constant="8" id="wFT-vo-yLx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XRg-Fa-SI2"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9f-68-ejK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2946" y="-486"/>
+            <point key="canvasLocation" x="3253.5999999999999" y="-667.01649175412297"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eQq-Ip-G1a">
@@ -123,7 +228,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAC-be-UmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2941" y="185"/>
+            <point key="canvasLocation" x="3254" y="334"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xte-E4-JML"/>
+    </inferredMetricsTieBreakers>
 </document>

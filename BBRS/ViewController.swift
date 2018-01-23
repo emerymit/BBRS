@@ -12,13 +12,13 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let delegate = UIApplication.shared.delegate as! AppDelegate
-    var reminders: [Reminder] = []
+    var reminders: [ReminderMO] = []
     let cellID = "reuse"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        reminders.append(Reminder(title: "test", body: "test", beacon: BeaconMO()))
+        //reminders.append(Reminder(title: "test", body: "test", beacon: BeaconMO()))
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +37,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! ReminderCell
         
         //set cell values
-        cell._lblTitle.text = reminders[indexPath.row].reminderTitle
-        cell._lblBody.text = reminders[indexPath.row].reminderBody
+        //cell._lblTitle.text = reminders[indexPath.row].reminderTitle
+        //cell._lblBody.text = reminders[indexPath.row].reminderBody
         
         
         return cell
